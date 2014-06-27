@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+</head>
+<justify><a href="/blog/newpost">New Post</a> </justify>
+<center><b><u><h1>Blog</h1></u></b></center>
+
+<style type="text/css">
+        body {
+        font:family:sans-serif;
+        width:800px;
+        marin:0 auto;
+        padding:10px
+        }
+
+        .error {
+        color:red
+        }
+
+        label {
+        display:block;
+        font-size:20px
+        }
+
+        input[type=text] {
+        width:400px;
+        font-size:20px;
+        padding:2px;
+        }
+
+        textarea {
+        width:400px;
+        height:200px;
+        font-size:20px;
+        font-family:monospace;
+        }
+
+        input[type=submit] {
+        font-size=24px;
+        }
+
+        hr {
+        margin:20px auto;
+        }
+
+        .content +.content {
+        margin-top:20px;
+        }
+
+        .content -title {
+        font-weight:bold;
+        font-size:20px;
+        }
+
+        .content-body {
+        margin:0;
+        font-size:20px;
+        }
+
+    </style>
+<center>
+<body>
+ {% for content in contents %}
+    <div class="content">
+        <hr>
+        <div class="content-title"><h2><b>{{content.title}}</b></h2></div>
+        <pre class="content-body">{{content.content}}</pre>
+
+    </div>
+    <div class="age">
+        {{age}}
+    </div>
+ {% endfor %}
+
+
+</body>
+    </center>
+</html>
